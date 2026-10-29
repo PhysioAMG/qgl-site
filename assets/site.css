@@ -84,7 +84,7 @@ ul.list li::before{content:"";position:absolute;left:2px;top:.72em;width:7px;hei
 .post{display:block;border:1px solid var(--line);border-radius:12px;padding:20px 22px;text-decoration:none;color:var(--ink);background:var(--bg)}
 .post:hover{border-color:var(--blue);background:var(--wash)}
 .post time{font-size:13px;color:var(--muted)}
-.post h2{font-family:var(--display);font-weight:400;font-size:21px;color:var(--blue);margin:4px 0 6px}
+.post h2,.post h3{font-family:var(--display);font-weight:400;font-size:21px;color:var(--blue);margin:4px 0 6px}
 .post p{margin:0;font-size:15px;color:var(--muted)}
 .callout.enbref{border-color:var(--blue)}
 .plan{margin:18px 0 22px}
@@ -269,3 +269,4 @@ dl.defs dd{margin:0;font-size:15px}
 
 
 .h1-sub{display:block;font-size:.46em;line-height:1.35;margin-top:10px;color:var(--ink);letter-spacing:0}
+.muted{color:var(--muted);font-size:15px}
