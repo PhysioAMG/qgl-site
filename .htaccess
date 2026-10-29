@@ -15,6 +15,8 @@ RewriteRule ^ https://qgl.fr%{REQUEST_URI} [L,R=301]
 # www.qgl.fr -> qgl.fr
 RewriteCond %{HTTP_HOST} ^www\.qgl\.fr$ [NC]
 RewriteRule ^ https://qgl.fr%{REQUEST_URI} [L,R=301]
+# ancienne rubrique /blog/ -> /actualites/ (renommée le 29/10/2026)
+RewriteRule ^blog(/.*)?$ https://qgl.fr/actualites$1 [L,R=301]
 # barre oblique finale pour les dossiers
 RewriteCond %{REQUEST_FILENAME} -d
 RewriteCond %{REQUEST_URI} !/$
