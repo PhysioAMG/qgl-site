@@ -270,3 +270,5 @@ dl.defs dd{margin:0;font-size:15px}
 
 .h1-sub{display:block;font-size:.46em;line-height:1.35;margin-top:10px;color:var(--ink);letter-spacing:0}
 .muted{color:var(--muted);font-size:15px}
+.site-foot .foot-social{margin:10px 0 0}
+.site-foot .foot-social a{display:inline-flex;align-items:center;gap:8px}
