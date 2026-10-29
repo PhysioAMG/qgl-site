@@ -1,3 +1,4 @@
+# qgl.fr — publié automatiquement depuis GitHub
 User-agent: *
 Allow: /
 Disallow: /404.html
