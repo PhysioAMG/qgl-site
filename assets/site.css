@@ -120,7 +120,7 @@ ul.list li::before{content:"";position:absolute;left:2px;top:.72em;width:7px;hei
 .section h2:first-child,.section .eyebrow+h2{margin-top:0}
 .feel{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:28px}
 .feel a{display:block;background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:20px;text-decoration:none;color:var(--ink);transition:border-color .2s,transform .2s}
-.feel a:hover{border-color:var(--blue);transform:translateY(-2px)}
+.feel a:hover{border-color:var(--blue)}
 .feel .q{font-family:var(--display);font-size:21px;color:var(--blue);display:block;margin-bottom:6px}
 .feel .a{font-size:14px;color:var(--muted)}
 @media (max-width:760px){.feel{grid-template-columns:1fr}}
@@ -273,15 +273,15 @@ dl.defs dd{margin:0;font-size:15px}
 .site-foot .foot-social{margin:10px 0 0}
 .site-foot .foot-social a{display:inline-flex;align-items:center;gap:8px}
 .site-foot :focus-visible{outline-color:#fff}
-/* Animations douces (fondu entre les pages, apparition au défilement, survol) : seulement si le visiteur n'a pas demandé à réduire les animations */
+/* Effets doux, sans déplacement (patients sensibles au mouvement) : fondu entre les pages, fondu des photos au défilement, changements de teinte. Seulement si le visiteur n'a pas demandé à réduire les animations. */
 @media (prefers-reduced-motion:no-preference){
 @view-transition{navigation:auto}
 ::view-transition-old(root),::view-transition-new(root){animation-duration:.3s;animation-timing-function:ease}
-.reveal{opacity:0;transform:translateY(10px);transition:opacity .6s ease,transform .6s ease}
-.reveal.is-in{opacity:1;transform:none}
-a.post{transition:border-color .2s ease,background-color .2s ease,transform .2s ease,box-shadow .2s ease}
-a.post:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(30,40,70,.08)}
+.reveal{opacity:0;transition:opacity .6s ease}
+.reveal.is-in,.reveal:focus-within{opacity:1}
+a.post{transition:border-color .2s ease,background-color .2s ease}
 .btn,.cta{transition:background-color .2s ease,color .2s ease,box-shadow .2s ease}
 .site-foot a,.nav a{transition:color .2s ease}
 }
-@media print{.reveal{opacity:1!important;transform:none!important}}
+@media (prefers-reduced-motion:reduce){@view-transition{navigation:none}.reveal{opacity:1!important}}
+@media print{.reveal{opacity:1!important}}
