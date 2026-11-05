@@ -285,3 +285,4 @@ a.post{transition:border-color .2s ease,background-color .2s ease}
 }
 @media (prefers-reduced-motion:reduce){@view-transition{navigation:none}.reveal{opacity:1!important}}
 @media print{.reveal{opacity:1!important}}
+h2[id],h3[id]{scroll-margin-top:96px}
